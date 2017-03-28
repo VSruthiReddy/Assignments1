@@ -1,0 +1,30 @@
+Test ng:
+
+package testNG;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class TestNgAnnotations {
+//in testNG by default the methods gets executed in alphabetical order
+	//but we can set the priorities
+	@Test(priority=1, description="this test case will verify the login functionality")
+	public void loginTest(){
+		
+		
+	}
+	@Test(priority=2,description="this test case will add items ot the basket")
+	public void selectItems(){
+		Assert.assertEquals(12, 13);//here expected is 13 but the actual is 12 so the test case fails and 
+		//it will still continue executing the remaining test cases
+		
+	}
+//testNG supports negative numbers as priorities.and the testcases or the methods with negative numbers as priorities 
+	//will be executed first
+	//testNG also has the flexibility that whenever a test case fails then it will continue executing the remaining 
+	//part of the application or the remaining test cases
+	@Test(priority=-3, description="this test case will perform check out operation")
+	public void checkout(){
+	
+	
+}
+}
