@@ -1,0 +1,14 @@
+Groovy Scripting with collections
+
+Hashtable ht=new Hashtable()
+ht.put("Name","SOAPUI")
+ht.put("Course","Training")
+log.info ht.get("Course")
+
+//Map
+def names = ["Name":"soap", "course":"IT"]
+log.info names["Name"]
+
+//List
+def  course=[1,2,"soap",4,5]
+log.info course[2]
