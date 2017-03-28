@@ -1,0 +1,29 @@
+Groovy Scripting Handling Exceptions and Collections:
+
+def terms=["SOAPUI", "Training", "online","IT"]
+log.info terms[0]
+log.info terms[3]
+for(def i=0;i<4;i++)
+{
+	log.info terms[i]
+}
+//Exceptions
+try
+{
+def x=4/0	
+}
+catch(Exception e)
+{
+	log.info "script not able to handle"
+}
+//Array List
+ArrayList ar = new ArrayList()
+ar.add("a")
+log.info ar.get(0)
+ar.add("b")
+log.info ar.get(1)
+//HashTable (Key, value)
+Hashtable ht=new Hashtable()
+ht.put("Name","SOAPUI")
+ht.put("Name","Training")
+ht.get("Course")
