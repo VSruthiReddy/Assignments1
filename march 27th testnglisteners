@@ -1,0 +1,38 @@
+Test ng listeners:
+package TestNgListeners;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+//here we are using listeners at the class level we can use it at the suite level by testng.xml file
+//where we ass listeners tag and mention the listeners class
+//<listeners> 
+//<listener class-name = "TestNgListeners.TestngListeners">
+//<listener class-name = "TestNgListeners.TestngListeners"> we can write any number of listeners 
+//using listeners class name tag
+//</listeners>
+@Listeners(TestNgListeners.TestngListeners.class)
+public class MyFirstTestCase {
+
+@Test
+	public void GoogleTitleVerify(){
+	System.setProperty("webdriver.gecko.driver", "c://geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+	driver.manage().window().maximize();
+		driver.get("http://www.google.com");
+	System.out.println(driver.getTitle());
+driver.quit();
+	}
+@Test
+public void TitleMatch(){
+	
+	System.out.println("dummy test case");
+	//this method is used to fail the test case
+	//actually assertTrue( ) method takes true as input if we 
+	//pass false then the test case fails
+	Assert.assertTrue(false);
+}
+
+}
