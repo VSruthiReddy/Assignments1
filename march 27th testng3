@@ -1,0 +1,52 @@
+Test ng listeners:
+package TestNgListeners;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
+
+public class TestngListeners implements ITestListener {
+//we can implement Listeners in 2 ways by extending TestListenerAdapter class or by implementing ITestListener interface
+	//Listeners are used to create customized testNG reports or log files
+	//in general we get test started and test skipped but using listeners, but  we can create customized  reports using listeners
+	@Override
+	public void onTestStart(ITestResult result) {
+		System.out.println("Testcase started and the results are:" +result.getName());
+		
+	}
+
+	@Override
+	public void onTestSuccess(ITestResult result) {
+		System.out.println("Testcase hurray test case is success and the results are:" +result.getName());
+	}
+
+	@Override
+	public void onTestFailure(ITestResult result) {
+		System.out.println("Testcase failed and the results are:" +result.getName());
+		
+	}
+
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		System.out.println("Testcase failed and the results are:" +result.getName());
+		
+	}
+
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+		System.out.println("Testcase failed and the results are:" +result.getName());
+	}
+
+	@Override
+	public void onStart(ITestContext context) {
+		
+		
+	}
+
+	@Override
+	public void onFinish(ITestContext context) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}
