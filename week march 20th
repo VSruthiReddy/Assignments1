@@ -1,0 +1,50 @@
+SOAP UI Groovy scripting
+//Groovy scripting is loosely coupled
+
+//for printing in the console
+log.info "SOAPUITrainingonline.com"
+//declare variables
+//loosely coupled language
+
+def Trainer = "Sruthi"
+def videos=30
+def videos2=false
+log.info Trainer
+log.info Trainer
+//operators
+log.info "Number of videos present are" + videos
+log.info "Number of videos present are $videos"
+assert videos==30
+//if loop
+if(videos==30)
+{
+	log.info "success"
+	
+}
+else {
+
+	log.info "Not success"
+}
+for(def i=0;i<10;i++)
+{
+log.info i
+	
+}
+//while loop
+def j=1
+while(j<5)
+{
+	log.info j
+j++
+}
+def abc=new String[5]//array declaration
+abc[0] ="soap"
+abc[1]="online"
+abc[2]="Training"
+abc[3]="IT"
+abc[4]="UI"
+for(def k=0;k<abc.size();k++)
+{
+	log.info abc[k]
+}
+log.info "Array size"+abc
